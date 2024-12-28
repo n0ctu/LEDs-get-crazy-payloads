@@ -8,13 +8,13 @@ The protocol couldn't be simpler. The LED matrix listens for UDP packets on port
 Let's turn on the first three pixels in red, green and blue:
 
 ```bash
-echo -ne '\xff\x00\x00\x00\xff\x00\x00\x00\xff' | nc -u 151.217.233.92 54321
+echo -ne '\xff\x00\x00\x00\xff\x00\x00\x00\xff' | nc -u 151.217.4.162 54321
 ```
 
 Easy, right? Now let's get crazier and create some random noise:
 
 ```bash
-cat /dev/urandom | nc -u 151.217.233.92 54321
+cat /dev/urandom | nc -u 151.217.4.162 54321
 ```
 
 That was fun! But much more interesting things can be done with a little bit of structure. Python is the perfect tool for that. Let's start with a minimal example:
@@ -22,7 +22,7 @@ That was fun! But much more interesting things can be done with a little bit of 
 ```python
 import socket
 sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-sock.sendto(b'\xff\x00\x00\x00\xff\x00\x00\x00\xff', ('151.217.233.92', 54321))
+sock.sendto(b'\xff\x00\x00\x00\xff\x00\x00\x00\xff', ('151.217.4.162', 54321))
 sock.close()
 ```
 
@@ -37,7 +37,7 @@ payload = b''
 for i in range(1152):
     r, g, b = colorsys.hsv_to_rgb(i / 1152, 1, 1)
     payload += bytes([int(r * 255), int(g * 255), int(b * 255)])
-sock.sendto(payload, ('151.217.233.92', 54321))
+sock.sendto(payload, ('151.217.4.162', 54321))
 sock.close()
 ```
 
