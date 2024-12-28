@@ -4,7 +4,7 @@ import time
 
 # Configuration
 num_pixels = 1152
-udp_ip = "100.91.88.116"   # Current IP address of the ledsgc matrix
+udp_ip = "ledsgc.luxeria.ch"   # Current IP address of the ledsgc matrix
 udp_port = 54321           # Default port
 
 def send_byte_array(byte_array):
@@ -56,4 +56,4 @@ def video_to_grb_byte_array(video_path):
 
 # Example usage
 while True:
-    video_to_grb_byte_array("media/nyan.gif")
+    video_to_grb_byte_array("media/luxeria.mp4")

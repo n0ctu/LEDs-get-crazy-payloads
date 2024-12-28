@@ -3,7 +3,7 @@ import socket
 
 # Configuration
 num_pixels = 1152
-udp_ip = "100.91.88.116"    # Current IP address of the ledsgc matrix
+udp_ip = "ledsgc.luxeria.ch"    # Current IP address of the ledsgc matrix
 udp_port = 54321            # Default port
 canvas_height = 24
 canvas_width = 48
