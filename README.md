@@ -52,5 +52,5 @@ Take a look at some more python examples in this repo to get a hang, then create
 If you want to test your code offline before sending anything to the actual matrix, you may simulate it locally: https://github.com/nickik/ledsim
 
 ## Credits for contributions
-- **webcam.py**: Stream your webcam to the matrix. Thanks [@rnestler](https://github.com/rnestler)!
+- **webcam.py**: Stream your webcam to the matrix. Thanks [@rnestler](https://github.com/rnestler)! See https://github.com/rnestler/38c3-luxeria-led-python for more stuff.
 - **Simulator:** [Test](https://github.com/nickik/ledsim) your payloads locally. Thanks [@nickik](https://github.com/nickik)
